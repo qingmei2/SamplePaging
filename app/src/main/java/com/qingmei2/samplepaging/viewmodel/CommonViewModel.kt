@@ -9,7 +9,7 @@ import com.qingmei2.samplepaging.db.StudentDb
 
 class CommonViewModel(app: Application) : AndroidViewModel(app) {
 
-    val dao = StudentDb.get(app).studentDao()
+    private val dao = StudentDb.get(app).studentDao()
 
     val allStudents = LivePagedListBuilder(dao.getAllStudent(), PagedList.Config.Builder()
             .setPageSize(PAGE_SIZE)                         //配置分页加载的数量

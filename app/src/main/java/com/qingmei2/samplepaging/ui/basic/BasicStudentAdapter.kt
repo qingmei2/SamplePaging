@@ -4,7 +4,7 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import android.view.ViewGroup
 import com.qingmei2.samplepaging.db.Student
-import com.qingmei2.samplepaging.ui.StudentViewHolder
+import com.qingmei2.samplepaging.ui.viewholder.StudentViewHolder
 
 class BasicStudentAdapter : PagedListAdapter<Student, StudentViewHolder>(diffCallback) {
 

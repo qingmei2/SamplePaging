@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.qingmei2.samplepaging.R
-import com.qingmei2.samplepaging.ui.basic.BasicStudentAdapter
 import com.qingmei2.samplepaging.viewmodel.CommonViewModel
 import kotlinx.android.synthetic.main.activity_basic_usage.*
 
@@ -23,7 +22,7 @@ class HeaderUsageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_header_usage)
 
-        val adapter = BasicStudentAdapter()
+        val adapter = HeaderUsageAdapter()
         recyclerView.adapter = adapter
 
         viewModel.allStudents.observe(this, Observer { adapter.submitList(it) })
