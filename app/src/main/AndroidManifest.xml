@@ -20,12 +20,12 @@
 		</activity>
 
 		<activity
-			android:name=".ui.BasicUsageActivity"
+			android:name=".ui.basic.BasicUsageActivity"
 			android:label="Paging基本用法"
 			android:screenOrientation="portrait" />
 
 		<activity
-			android:name=".ui.HeaderUsageActivity"
+			android:name=".ui.header.HeaderUsageActivity"
 			android:label="为列表添加Header"
 			android:screenOrientation="portrait" />
 	</application>

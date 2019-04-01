@@ -1,4 +1,4 @@
-package com.qingmei2.samplepaging.adapter
+package com.qingmei2.samplepaging.ui
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater

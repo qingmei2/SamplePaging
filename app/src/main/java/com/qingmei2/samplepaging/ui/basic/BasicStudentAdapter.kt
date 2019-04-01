@@ -1,11 +1,12 @@
-package com.qingmei2.samplepaging.adapter
+package com.qingmei2.samplepaging.ui.basic
 
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import android.view.ViewGroup
 import com.qingmei2.samplepaging.db.Student
+import com.qingmei2.samplepaging.ui.StudentViewHolder
 
-class StudentAdapter : PagedListAdapter<Student, StudentViewHolder>(diffCallback) {
+class BasicStudentAdapter : PagedListAdapter<Student, StudentViewHolder>(diffCallback) {
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         holder.bindTo(getItem(position))
