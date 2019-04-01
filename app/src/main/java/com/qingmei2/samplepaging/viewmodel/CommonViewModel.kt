@@ -1,4 +1,4 @@
-package com.qingmei2.samplepaging
+package com.qingmei2.samplepaging.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,7 +7,7 @@ import androidx.paging.PagedList
 import com.qingmei2.samplepaging.db.Student
 import com.qingmei2.samplepaging.db.StudentDb
 
-class MainViewModel(app: Application) : AndroidViewModel(app) {
+class CommonViewModel(app: Application) : AndroidViewModel(app) {
 
     val dao = StudentDb.get(app).studentDao()
 
