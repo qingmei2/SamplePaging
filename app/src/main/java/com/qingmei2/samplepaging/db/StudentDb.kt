@@ -37,13 +37,13 @@ abstract class StudentDb : RoomDatabase() {
 
 private val CHEESE_DATA = arrayListOf(
         "Abbaye de Belloc", "Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
-        "Acorn", "Adelost", "Affidelice au Chablis", "Afuega'l Pitu", "Airag", "Airedale",
-        "Aisy Cendre", "Allgauer Emmentaler", "Alverca", "Ambert", "American Cheese",
-        "Ami du Chambertin", "Anejo Enchilado", "Anneau du Vic-Bilh", "Anthoriro", "Appenzell",
-        "Aragon", "Ardi Gasna", "Ardrahan", "Armenian String", "Aromes au Gene de Marc",
-        "Asadero", "Asiago", "Aubisque Pyrenees", "Autun", "Avaxtskyr", "Baby Swiss",
-        "Babybel", "Baguette Laonnaise", "Bakers", "Baladi", "Balaton", "Bandal", "Banon",
-        "Barry's Bay Cheddar", "Basing", "Basket Cheese", "Bath Cheese", "Bavarian Bergkase",
+        "Acorn", "Adelost", "Affidelice au Chablis", "Afuega'l Pitu", "Airag",
+        "Airedale", "Aisy Cendre", "Allgauer Emmentaler", "Alverca", "Ambert",  // 15
+        "American Cheese", "Ami du Chambertin", "Anejo Enchilado", "Anneau du Vic-Bilh", "Anthoriro",
+        "Appenzell", "Aragon", "Ardi Gasna", "Ardrahan", "Armenian String",
+        "Aromes au Gene de Marc", "Asadero", "Asiago", "Aubisque Pyrenees", "Autun", // 30
+        "Avaxtskyr", "Baby Swiss", "Babybel", "Baguette Laonnaise", "Bakers",
+        "Baladi", "Balaton", "Bandal", "Banon", "Barry's Bay Cheddar", "Basing", "Basket Cheese", "Bath Cheese", "Bavarian Bergkase",
         "Baylough", "Beaufort", "Beauvoorde", "Beenleigh Blue", "Beer Cheese", "Bel Paese",
         "Bergader", "Bergere Bleue", "Berkswell", "Beyaz Peynir", "Bierkase", "Bishop Kennedy",
         "Blarney", "Bleu d'Auvergne", "Bleu de Gex", "Bleu de Laqueuille",
