@@ -1,4 +1,4 @@
-package com.qingmei2.samplepaging.ui.header_multitype
+package com.qingmei2.samplepaging.ui.header_simple
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,22 +7,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.qingmei2.samplepaging.R
-import com.qingmei2.samplepaging.ui.header_proxy.HeaderProxyAdapter
 import com.qingmei2.samplepaging.viewmodel.CommonViewModel
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_header_multitype.*
+import kotlinx.android.synthetic.main.activity_header_simple.*
 import java.util.concurrent.TimeUnit
 
 /**
  * 直接通过多类型列表的方式实现Header
  *
- * 实际上是有缺陷的，详情参考[HeaderMultiTypeAdapter]和运行后的效果
+ * 实际上是有缺陷的，详情参考[HeaderSimpleAdapter]和运行后的效果
  */
-class HeaderMultiTypeActivity : AppCompatActivity() {
+class HeaderSimpleActivity : AppCompatActivity() {
 
-    private lateinit var mAdapter: HeaderMultiTypeAdapter
+    private lateinit var mAdapter: HeaderSimpleAdapter
 
     private val viewModel by lazy(LazyThreadSafetyMode.NONE) {
         ViewModelProviders.of(this, object : ViewModelProvider.Factory {
@@ -32,9 +31,9 @@ class HeaderMultiTypeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_header_multitype)
+        setContentView(R.layout.activity_header_simple)
 
-        mAdapter = HeaderMultiTypeAdapter()
+        mAdapter = HeaderSimpleAdapter()
         recyclerView.adapter = mAdapter
 
         binds()

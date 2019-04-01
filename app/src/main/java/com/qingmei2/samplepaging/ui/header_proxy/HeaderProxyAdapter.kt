@@ -5,28 +5,32 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.qingmei2.samplepaging.db.Student
-import com.qingmei2.samplepaging.ui.viewholder.BannerViewHolder
+import com.qingmei2.samplepaging.ui.viewholder.HeaderViewHolder
+import com.qingmei2.samplepaging.ui.viewholder.FooterViewHolder
 import com.qingmei2.samplepaging.ui.viewholder.StudentViewHolder
 
 class HeaderProxyAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(diffCallback) {
 
     override fun getItemViewType(position: Int): Int {
-        return when (position == 0) {
-            true -> ITEM_TYPE_HEADER
-            false -> super.getItemViewType(position)
+        return when (position) {
+            0 -> ITEM_TYPE_HEADER
+            itemCount - 1 -> ITEM_TYPE_FOOTER
+            else -> super.getItemViewType(position)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
-            ITEM_TYPE_HEADER -> BannerViewHolder(parent)
+            ITEM_TYPE_HEADER -> HeaderViewHolder(parent)
+            ITEM_TYPE_FOOTER -> FooterViewHolder(parent)
             else -> StudentViewHolder(parent)
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is BannerViewHolder -> holder.binds()
+            is HeaderViewHolder -> holder.bindsHeader()
+            is FooterViewHolder -> holder.bindsFooter()
             is StudentViewHolder -> holder.bindTo(getStudentItem(position))
         }
     }
@@ -39,7 +43,11 @@ class HeaderProxyAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(di
     // 1.展示不全，因为第一个item展示了Header, 因此数据只展示了n-1条
     // 2.如果重写getItemCount()方法，指定item数量 +1，则界面刷新出现问题
     override fun getItemCount(): Int {
-        return super.getItemCount() + 1
+        return super.getItemCount() + 2
+    }
+
+    override fun registerAdapterDataObserver(observer: RecyclerView.AdapterDataObserver) {
+        super.registerAdapterDataObserver(AdapterDataObserverProxy(observer, 1))
     }
 
     companion object {
@@ -52,5 +60,6 @@ class HeaderProxyAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(di
         }
 
         private const val ITEM_TYPE_HEADER = 99
+        private const val ITEM_TYPE_FOOTER = 100
     }
 }

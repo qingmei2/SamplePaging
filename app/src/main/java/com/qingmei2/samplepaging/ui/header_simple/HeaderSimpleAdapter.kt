@@ -1,14 +1,14 @@
-package com.qingmei2.samplepaging.ui.header_multitype
+package com.qingmei2.samplepaging.ui.header_simple
 
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.qingmei2.samplepaging.db.Student
-import com.qingmei2.samplepaging.ui.viewholder.BannerViewHolder
+import com.qingmei2.samplepaging.ui.viewholder.HeaderViewHolder
 import com.qingmei2.samplepaging.ui.viewholder.StudentViewHolder
 
-class HeaderMultiTypeAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(diffCallback) {
+class HeaderSimpleAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(diffCallback) {
 
     override fun getItemViewType(position: Int): Int {
         return when (position == 0) {
@@ -19,14 +19,14 @@ class HeaderMultiTypeAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
-            ITEM_TYPE_HEADER -> BannerViewHolder(parent)
+            ITEM_TYPE_HEADER -> HeaderViewHolder(parent)
             else -> StudentViewHolder(parent)
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is BannerViewHolder -> holder.binds()
+            is HeaderViewHolder -> holder.bindsHeader()
             is StudentViewHolder -> holder.bindTo(getStudentItem(position))
         }
     }

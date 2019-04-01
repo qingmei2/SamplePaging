@@ -15,9 +15,9 @@ class CommonViewModel(app: Application) : AndroidViewModel(app) {
 
     fun getRefreshLiveData(): LiveData<PagedList<Student>> =
             LivePagedListBuilder(dao.getAllStudent(), PagedList.Config.Builder()
-                    .setPageSize(MifareUltralight.PAGE_SIZE)        //配置分页加载的数量
+                    .setPageSize(PAGE_SIZE)                         //配置分页加载的数量
                     .setEnablePlaceholders(ENABLE_PLACEHOLDERS)     //配置是否启动PlaceHolders
-                    .setInitialLoadSizeHint(MifareUltralight.PAGE_SIZE)  //初始化加载的数量
+                    .setInitialLoadSizeHint(PAGE_SIZE)              //初始化加载的数量
                     .build()).build()
 
     companion object {

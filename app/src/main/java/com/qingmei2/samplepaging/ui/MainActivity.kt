@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.qingmei2.samplepaging.R
 import com.qingmei2.samplepaging.ui.basic.BasicUsageActivity
-import com.qingmei2.samplepaging.ui.header_multitype.HeaderMultiTypeActivity
+import com.qingmei2.samplepaging.ui.header_simple.HeaderSimpleActivity
 import com.qingmei2.samplepaging.ui.header_proxy.HeaderProxyActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, BasicUsageActivity::class.java))
         }
         mBtnHeaderMultiType.setOnClickListener {
-            startActivity(Intent(this, HeaderMultiTypeActivity::class.java))
+            startActivity(Intent(this, HeaderSimpleActivity::class.java))
         }
         mBtnHeaderProxy.setOnClickListener {
             startActivity(Intent(this, HeaderProxyActivity::class.java))

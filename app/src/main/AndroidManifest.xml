@@ -25,7 +25,7 @@
 			android:screenOrientation="portrait" />
 
 		<activity
-			android:name=".ui.header_multitype.HeaderMultiTypeActivity"
+			android:name=".ui.header_simple.HeaderSimpleActivity"
 			android:label="多类型列表方式添加Header"
 			android:screenOrientation="portrait" />
 
