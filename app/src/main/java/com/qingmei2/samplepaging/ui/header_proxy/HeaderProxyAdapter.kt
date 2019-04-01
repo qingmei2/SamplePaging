@@ -1,4 +1,4 @@
-package com.qingmei2.samplepaging.ui.header
+package com.qingmei2.samplepaging.ui.header_proxy
 
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
@@ -8,7 +8,7 @@ import com.qingmei2.samplepaging.db.Student
 import com.qingmei2.samplepaging.ui.viewholder.BannerViewHolder
 import com.qingmei2.samplepaging.ui.viewholder.StudentViewHolder
 
-class HeaderUsageAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(diffCallback) {
+class HeaderProxyAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(diffCallback) {
 
     override fun getItemViewType(position: Int): Int {
         return when (position == 0) {

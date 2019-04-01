@@ -1,4 +1,4 @@
-package com.qingmei2.samplepaging.ui.header
+package com.qingmei2.samplepaging.ui.header_proxy
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +10,7 @@ import com.qingmei2.samplepaging.R
 import com.qingmei2.samplepaging.viewmodel.CommonViewModel
 import kotlinx.android.synthetic.main.activity_basic_usage.*
 
-class HeaderUsageActivity : AppCompatActivity() {
+class HeaderProxyActivity : AppCompatActivity() {
 
     private val viewModel by lazy(LazyThreadSafetyMode.NONE) {
         ViewModelProviders.of(this, object : ViewModelProvider.Factory {
@@ -22,7 +22,7 @@ class HeaderUsageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_header_usage)
 
-        val adapter = HeaderUsageAdapter()
+        val adapter = HeaderProxyAdapter()
         recyclerView.adapter = adapter
 
         viewModel.allStudents.observe(this, Observer { adapter.submitList(it) })
