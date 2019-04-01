@@ -25,6 +25,6 @@ class BasicUsageActivity : AppCompatActivity() {
         val adapter = BasicStudentAdapter()
         recyclerView.adapter = adapter
 
-        viewModel.allStudents.observe(this, Observer { adapter.submitList(it) })
+        viewModel.getRefreshLiveData().observe(this, Observer { adapter.submitList(it) })
     }
 }
