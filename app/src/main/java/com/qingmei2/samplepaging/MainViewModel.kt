@@ -1,9 +1,9 @@
 package com.qingmei2.samplepaging
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
-import android.arch.paging.LivePagedListBuilder
-import android.arch.paging.PagedList
+import androidx.lifecycle.AndroidViewModel
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
 import com.qingmei2.samplepaging.db.Student
 import com.qingmei2.samplepaging.db.StudentDb
 

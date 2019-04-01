@@ -1,7 +1,7 @@
 package com.qingmei2.samplepaging.adapter
 
-import android.arch.paging.PagedListAdapter
-import android.support.v7.util.DiffUtil
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
 import android.view.ViewGroup
 import com.qingmei2.samplepaging.db.Student
 
