@@ -39,9 +39,6 @@ class HeaderProxyAdapter : PagedListAdapter<Student, RecyclerView.ViewHolder>(di
         return getItem(position - 1)
     }
 
-    // 这种多类型的Adapter存在很大的问题
-    // 1.展示不全，因为第一个item展示了Header, 因此数据只展示了n-1条
-    // 2.如果重写getItemCount()方法，指定item数量 +1，则界面刷新出现问题
     override fun getItemCount(): Int {
         return super.getItemCount() + 2
     }
